@@ -4,11 +4,31 @@
 
 using namespace std;
 
+class Command {
+
+public:
+
+	Command() = default;
+	string commands;
+
+	Command(string cmd) {
+
+		this->commands = cmd;
+	}
+
+	string getCommand() const {
+
+		return this->commands;
+
+	}
+};
 
 int main() {
 
+	Command command("");
 	std::cout << "Enter Type Command: ";
-	string commands;
+
+	string commands = command.getCommand();
 	cin >> commands;
 
 
